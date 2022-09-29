@@ -29,7 +29,7 @@ module.exports = {
                 const report = await StreamReport.start(
                     {configuration, stdout: this.context.stdout},
                      async (r) => {
-                        if (configuration.get(`nodeLinker`) === 'pnpm') {
+                        if (configuration.get(`nodeLinker`) === 'pnp') {
                             r.reportWarning(MessageName.UNNAMED, '"clean state" command is not implemented for pnp nodeLinker');
                         } else {
                             await cleanCache({xfs, cache});

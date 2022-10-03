@@ -27,3 +27,15 @@ Installation
 ```sh
 yarn plugin import https://github.com/fictitious/yarn-plugins/raw/main/yarn-plugin-no-external-scripts.cjs 
 ```
+
+## yarn-plugin-no-install-scripts
+
+Disables scripts during `yarn install`. Instead of running a script, yarn will print a warning.
+
+Could be useful if you have `enableScripts: false` in `.yarnrc.yml`, but that's not enough because you also have some packages or submodules which are part of your monorepo, and they have post-install scripts with undesirable effects. In other words, this spares you from adding `--mode=skip-build` each time when you run `yarn install`.
+
+Installation
+
+```sh
+yarn plugin import https://github.com/fictitious/yarn-plugins/raw/main/yarn-plugin-no-install-scripts.cjs 
+```
